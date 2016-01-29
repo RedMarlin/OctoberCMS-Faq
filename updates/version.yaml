@@ -1,6 +1,4 @@
-1.0.1: 
+1.0.0: 
 - Inicialize plugin
 - create_questions_table.php
 - create_faqcategory_table.php
-1.0.2:
-- New column created
