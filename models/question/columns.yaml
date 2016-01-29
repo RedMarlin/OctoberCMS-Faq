@@ -16,5 +16,5 @@ columns:
          label: Featured
          type: Switch
     reply_email:
-         label: Email
+         label: N. Email
     created_at: Date

@@ -13,12 +13,12 @@ fields:
         nameFrom: title
         span: right  
     is_approved:
-        label: Public?
+        label: Is Public?
         description: Make this Question visible on the site
         type: switch
         span: left
     is_featured:
-        label: Featured
+        label: Is Featured?
         description: Make this Question Featured
         type: switch
         span: left
@@ -36,4 +36,5 @@ fields:
         description: When the Question was created
         type: datepicker
     reply_email:
+        label: Notification Email
         disabled: true
