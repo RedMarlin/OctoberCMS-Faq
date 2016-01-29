@@ -1,4 +1,4 @@
-<?php namespace REDMARLIN\Faq\Models;
+<?php namespace RedMarlin\Faq\Models;
 
 use Model;
 use DB;
@@ -33,7 +33,7 @@ class Category extends Model
      * @var array Relations
      */
     public $hasMany = [
-        'question' => 'REDMARLIN\Faq\Models\Question'
+        'question' => 'RedMarlin\Faq\Models\Question'
     ];
    
 

@@ -1,11 +1,11 @@
-<?php namespace REDMARLIN\Faq\Controllers;
+<?php namespace RedMarlin\Faq\Controllers;
 
 use Flash;
 use Redirect;
 use BackendMenu;
 use Backend\Classes\Controller;
 use ApplicationException;
-use REDMARLIN\Faq\Models\Category;
+use RedMarlin\Faq\Models\Category;
 
 class Categories extends Controller
 {
@@ -22,7 +22,7 @@ class Categories extends Controller
      public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('REDMARLIN.Faq', 'faq', 'categories');
+        BackendMenu::setContext('RedMarlin.Faq', 'faq', 'categories');
     }
     
    

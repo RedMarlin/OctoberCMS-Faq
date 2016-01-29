@@ -1,4 +1,4 @@
-<?php namespace REDMARLIN\Faq\Models;
+<?php namespace RedMarlin\Faq\Models;
 
 use Model;
 use DB;
@@ -35,7 +35,7 @@ class Question extends Model
      * @var array Relations
      */
      public $belongsTo = [
-        'category' => 'REDMARLIN\Faq\Models\Category'
+        'category' => 'RedMarlin\Faq\Models\Category'
     ];
   
 

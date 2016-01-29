@@ -1,8 +1,8 @@
-<?php namespace REDMARLIN\Faq\Components;
+<?php namespace RedMarlin\Faq\Components;
 
 use Cms\Classes\ComponentBase;
-use REDMARLIN\Faq\Models\Question;
-use REDMARLIN\Faq\Models\Category;
+use RedMarlin\Faq\Models\Question;
+use RedMarlin\Faq\Models\Category;
 
 class FaqList extends ComponentBase
 {

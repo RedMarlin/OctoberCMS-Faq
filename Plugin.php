@@ -1,4 +1,4 @@
-<?php namespace REDMARLIN\Faq;
+<?php namespace RedMarlin\Faq;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -19,17 +19,17 @@ class Plugin extends PluginBase
         return [
             'name'        => 'Faq',
             'description' => 'Faq module',
-            'author'      => 'REDMARLIN',
+            'author'      => 'RedMarlin',
             'icon'        => 'icon-question-circle'
         ];
     }
     
     public function registerComponents(){
     return [
-            'REDMARLIN\Faq\Components\FaqList' => 'FaqList',
-            'REDMARLIN\Faq\Components\FaqAsk' => 'FaqAsk',
-            'REDMARLIN\Faq\Components\FaqLast' => 'FaqLast',
-            'REDMARLIN\Faq\Components\FaqFeatured' => 'FaqFeatured',
+            'RedMarlin\Faq\Components\FaqList' => 'FaqList',
+            'RedMarlin\Faq\Components\FaqAsk' => 'FaqAsk',
+            'RedMarlin\Faq\Components\FaqLast' => 'FaqLast',
+            'RedMarlin\Faq\Components\FaqFeatured' => 'FaqFeatured',
     ];
     }
     

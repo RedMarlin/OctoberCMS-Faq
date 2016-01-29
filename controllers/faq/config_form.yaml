@@ -4,7 +4,7 @@
 
 name: FAQ Editor
 form: @/plugins/redmarlin/faq/models/question/fields.yaml
-modelClass: REDMARLIN\Faq\Models\Question
+modelClass: RedMarlin\Faq\Models\Question
 defaultRedirect: redmarlin/faq/faq
 
 create:

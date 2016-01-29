@@ -4,7 +4,7 @@
 
 title: Faq Categories
 list: @/plugins/redmarlin/faq/models/category/columns.yaml
-modelClass: REDMARLIN\Faq\Models\Category
+modelClass: RedMarlin\Faq\Models\Category
 recordUrl: redmarlin/faq/categories/update/:id
 recordsPerPage: 20
 showSetup: true

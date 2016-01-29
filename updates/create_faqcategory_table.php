@@ -1,4 +1,4 @@
-<?php namespace REDMARLIN\Faq\Updates;
+<?php namespace RedMarlin\Faq\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

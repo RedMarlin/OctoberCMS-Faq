@@ -4,7 +4,7 @@
 
 name: FAQ Categories Editor
 form: @/plugins/redmarlin/faq/models/category/fields.yaml
-modelClass: REDMARLIN\Faq\Models\Category
+modelClass: RedMarlin\Faq\Models\Category
 defaultRedirect: redmarlin/faq/categories
 
 create:
