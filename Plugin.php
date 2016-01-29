@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'RedMarlin - Faq',
+            'name'        => 'Interactive Faq',
             'description' => 'Interactive Faq Plugin that allows your users ask questions directly from your webpage.',
             'author'      => 'RedMarlin',
             'icon'        => 'icon-question-circle'
