@@ -1,0 +1,10 @@
+           <span class="anchor" id="form-anch"></span>
+            {{ form_open({ request: 'onPost', url:'/faq/#form-arch' }) }}
+                {% flash %}
+                    <div class="alert alert-{{ type }}">{{ message }}</div>
+                {% endflash %}
+                 <textarea id="quotepage-textarea" name="question" rows="3">Question</textarea> 
+                 <input class="" type="text" value="Email" name="email" onblur="fillField(this,'Email');" onfocus="clearField(this,'Email');"> <input class="hidden" type="text" name="email2">
+                 <input class="button button-primary" type="submit" value="Send"/>
+                {{ form_close() }}
+

@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+    category:
+        label: Category
+        type: relation
+        nameFrom: title
+        span: right  
+    is_approved:
+        label: Public?
+        description: Make this Question visible on the site
+        type: switch
+        span: left
+    is_featured:
+        label: Featured
+        description: Make this Question Featured
+        type: switch
+        span: left
+    question:
+        label: Question
+        description: Edit question here
+        type: text
+    answer:
+        label: Answer
+        description: Edit answer here
+        type: markdown
+        size: small
+    created_at:
+        label: Creation Date
+        description: When the Question was created
+        type: datepicker
+    reply_email:
+        disabled: true

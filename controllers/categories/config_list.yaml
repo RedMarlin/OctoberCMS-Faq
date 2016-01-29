@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Faq Categories
+list: @/plugins/redmarlin/faq/models/category/columns.yaml
+modelClass: REDMARLIN\Faq\Models\Category
+recordUrl: redmarlin/faq/categories/update/:id
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

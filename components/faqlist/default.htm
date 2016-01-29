@@ -1,0 +1,17 @@
+{% set faqs = __SELF__.faqs %}
+<ul class="noindentlist nostylelist">
+
+ 	{% for faq in faqs %}
+ 	<span class="anchor" id="question_{{ faq.id }}"></span>
+	<li class="faq-li">
+		<div class="faq-container">
+
+ 			<h3><a href="#">Q: {{ faq.question }}</a></h3>
+ 			<span class="faq-date">{{ faq.created_at|date("d-m-Y")}}</span>
+ 			</div>
+ 			<span class="faq-answer">{{ faq.answer|md }} </span>
+ 			
+ 	</li>
+
+ {% endfor %}
+ </ul>

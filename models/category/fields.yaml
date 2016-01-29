@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+    title:
+        label: Category
+        description: Edit Category Title
+        type: text
+    lang:
+        label: Language
+        description: Language symbol
+        type: text
