@@ -13,5 +13,5 @@ fields:
         type: text
     lang:
         label: Language
-        description: Language symbol
+        description: Language iso code (2digits)
         type: text
