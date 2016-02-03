@@ -17,7 +17,7 @@ class Category extends Model
 
     public $rules = [
         'title' => 'required',
-        'lang' => 'required|string',
+        'lang' => 'string',
     ];
     /**
      * @var array Guarded fields
