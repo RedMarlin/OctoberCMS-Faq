@@ -29,7 +29,7 @@ class Categories extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $postId) {
-                if (!$post = Question::find($postId))
+                if (!$post = Category::find($postId))
                     continue;
                 $post->delete();
             }
