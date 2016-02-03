@@ -30,7 +30,6 @@ class FaqFeatured extends ComponentBase
     }
      public function onRun()
     {
-        //$faq = new Question();
         $this->faqsfeatured = Question::whereIsApproved('1')
                                 ->whereIsFeatured('1')
                                 ->orderBy('id', 'desc')

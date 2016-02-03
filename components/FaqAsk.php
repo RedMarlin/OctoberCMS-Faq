@@ -28,12 +28,10 @@ class FaqAsk extends ComponentBase
     }
      public function onPost()
     {
-    # Collect input
+    
     $question = Html::clean(post('question'));
-    $bot = post('email2');
     $reply_email = post('email');
     
-    # Form Validation
     $validator = Validator::make(
         [
             'question' => $question,
@@ -49,18 +47,21 @@ class FaqAsk extends ComponentBase
     {
         Flash::error('Please enter the question'); 
     }
-    elseif ( !empty($bot)) {
-        Flash::error('Please dont fill this field.'); 
-    }
     else {
         $ask = new Question;
         $ask->question = $question;
 
+        /**
+        * Saving question in DB
+        **/
         $ask->is_approved = '0';
         $ask->category_id = '0';
         $ask->reply_email = $reply_email;
         $ask->save();
 
+        /**
+        * Sending email to admin
+        **/
         $params = compact('question');
         Mail::send('faq::mail.asked',$params, function ($message) {
             $message->to(MailSettings::get('sender_email'));

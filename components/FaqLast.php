@@ -39,8 +39,6 @@ class FaqLast extends ComponentBase
     }
      public function onRun()
     {
-        //$faq = new Question();
-
         $this->faqs = Question::whereIsApproved('1')
                         ->orderBy('id', 'desc')
                         ->with('category')
