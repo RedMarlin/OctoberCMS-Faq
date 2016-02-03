@@ -24,6 +24,19 @@ class Categories extends Controller
         parent::__construct();
         BackendMenu::setContext('RedMarlin.Faq', 'faq', 'categories');
     }
+
+    public function index_onDelete()
+    {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $postId) {
+                if (!$post = Question::find($postId))
+                    continue;
+                $post->delete();
+            }
+            Flash::success('Category Deleted', ['name' => 'Category']);
+        }
+        return $this->listRefresh();
+    }
     
    
 }
