@@ -1,4 +1,4 @@
 1.0.0: 
-- Inicialize plugin
+- Initialize plugin
 - create_questions_table.php
 - create_faqcategory_table.php

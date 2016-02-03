@@ -8,7 +8,7 @@ modelClass: RedMarlin\Faq\Models\Category
 defaultRedirect: redmarlin/faq/categories
 
 create:
-    title: ADD Category
+    title: Add Category
     redirect: redmarlin/faq/categories/update/:id
     redirectClose: redmarlin/faq/categories
     flashSave: Category added correctly.
