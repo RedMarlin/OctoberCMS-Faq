@@ -9,7 +9,7 @@ use DB;
  */
 class Category extends Model
 {
-
+    use \October\Rain\Database\Traits\Validation;
     /**
      * @var string The database table used by the model.
      */
@@ -35,6 +35,6 @@ class Category extends Model
     public $hasMany = [
         'question' => 'RedMarlin\Faq\Models\Question'
     ];
-   
+    public $timestamps = false; 
 
 }

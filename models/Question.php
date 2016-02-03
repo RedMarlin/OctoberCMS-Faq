@@ -16,7 +16,7 @@ class Question extends Model
     public $table = 'redmarlin_faq_questions';
 
     public $rules = [
-        'category_id' => 'integer',
+        'category_id' => 'integer|required',
         'is_approved' => 'boolean',
         'is_featured' => 'boolean'
     ];

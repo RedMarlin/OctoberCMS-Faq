@@ -12,9 +12,9 @@ class CreateQuestionsTable extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->longText('question');
-            $table->longText('answer');
-            $table->integer('category_id');   
+            $table->longText('question')->nullable();
+            $table->longText('answer')->nullable();
+            $table->integer('category_id')->nullable();   
             $table->boolean('is_approved')->default(0);
             $table->boolean('is_featured')->default(0);
             $table->string('reply_email')->nullable();

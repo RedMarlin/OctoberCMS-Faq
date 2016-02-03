@@ -13,7 +13,7 @@ class CreateFaqCategoryTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->longText('title');
-            $table->string('lang');
+            $table->string('lang')->nullable();
         });
     }
 
