@@ -42,7 +42,13 @@ class Plugin extends PluginBase
             ],
         ];
     }
-
+    public function registerMailTemplates()
+    {
+        return [
+            'redmarlin.faq::mail.replied' => 'User notification about question being answered',
+            'redmarlin.faq::mail.asked'  => 'Notification about new question being asked'
+        ];
+    }
     public function registerNavigation()
     {
         return [

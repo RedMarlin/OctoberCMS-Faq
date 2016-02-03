@@ -37,6 +37,9 @@ class Faq extends Controller
         }
         return $this->listRefresh();
     }
+    /**
+    * Sends Notify email when admin clicks the Notify Button
+    **/
     public function onNotify($recordId = null)
     {
         $model = $this->formFindModelObject($recordId);
@@ -51,6 +54,9 @@ class Faq extends Controller
                     $message->to($reply_email);
                 });
             
+            /**
+            * After notification is send mail is removed.
+            **/
             $model->reply_email = "";
             $model->save();
             Flash::success('Notification send sucessfully to: ' .$reply_email);
