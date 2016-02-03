@@ -19,9 +19,9 @@ class FaqFeatured extends ComponentBase
     {
         return [
              'featuredNumber' => [
-             'title'             => 'Questions Number',
+             'title'             => 'Number of Questions',
              'description'       => 'Show X Featured Questions',
-             'default'           => 3,
+             'default'           => 5,
              'type'              => 'string',
              'validationPattern' => '^[0-9]+$',
              'validationMessage' => 'The Question Number property can contain only numeric symbols'

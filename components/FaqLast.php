@@ -20,21 +20,13 @@ class FaqLast extends ComponentBase
     {
         return [
              'questionNumber' => [
-             'title'             => 'Question number',
-             'description'       => 'Show X Last questions',
+             'title'             => 'Number of Questions',
+             'description'       => 'Show X last questions',
              'default'           => 5,
              'type'              => 'string',
              'validationPattern' => '^[0-9]+$',
              'validationMessage' => 'The Question number property can contain only numeric symbols'
-            ],
-            'linkid' => [
-             'title'             => 'Link id',
-             'description'       => 'Needed to show ',
-             'default'           => ':linkid',
-             'type'              => 'string',
-             'validationPattern' => '',
-             'validationMessage' => 'The Question number property can contain only numeric symbols'
-             ]
+            ]
         ];
     }
      public function onRun()

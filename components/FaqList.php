@@ -20,8 +20,8 @@ class FaqList extends ComponentBase
     {
         return [
              'categoryId' => [
-             'title'             => 'Category',
-             'description'       => 'List questions from which category',
+             'title'             => 'Category id',
+             'description'       => 'List all questions from given category',
              'default'           => 1,
              'type'              => 'string',
              'validationPattern' => '^[0-9]+$',
