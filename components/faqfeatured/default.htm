@@ -1,10 +1,10 @@
-  {% set faqsfeatured = __SELF__.faqsfeatured %}
- <div id="bottom-hotfaq" class="">
- 				<h3 class="white">Hot Questions</h3>
-               <ul class="noindentlist nostylelist">
-                {% for faqfeatured in faqsfeatured %}
-               		<li class=""><a class="footer-link" href="/faq/{{ faqfeatured.id }}#question-{{ faqfeatured.id }}">{{ faqfeatured.question }}</a></li>
-              {% endfor %}
-               </ul>
+{% set faqsfeatured = __SELF__.faqsfeatured %}
+<div>
+ 	<h3>Hot Questions</h3>
+    <ul>
+        {% for faqfeatured in faqsfeatured %}
+      		<li><a href="/faq/{{ faqfeatured.id }}#question-{{ faqfeatured.id }}">{{ faqfeatured.question }}</a></li>
+        {% endfor %}
+    </ul>
               
  </div>

@@ -1,16 +1,12 @@
 {% set faqs = __SELF__.faqs %}
-
-<ul class="noindentlist nostylelist">
-
+<ul>
  	{% for faq in faqs %}
-	<li class="faq-li">
-		<div class="faq-container">
-			<span class="anchor" id="question_{{ faq.id }}"></span>
- 			<h3><a href="#" onclick="$(answer_{{ faq.id }}).toggle(500);">Q: {{ faq.question }}</a> <span class="faq-date">{{ faq.created_at|date("d-m-Y")}}</span></h3>
- 			
- 			<span id="answer_{{ faq.id }}" class="faq-answer {{ this.param.linkid != faq.id ? 'hidden' }}">{{ faq.answer|md }} </span>
- 		</div>
- 	</li>
-
- {% endfor %}
+		<li>
+			<div id="question_{{ faq.id }}">
+ 				<h3>Q: {{ faq.question }} </h3>
+ 				<span>{{ faq.created_at|date("d-m-Y")}}</span>
+ 				<span>{{ faq.answer|md }}</span>
+ 			</div>
+ 		</li>
+	{% endfor %}
  </ul>
