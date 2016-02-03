@@ -16,7 +16,7 @@ class CreateQuestionsTable extends Migration
             $table->longText('answer');
             $table->integer('category_id');   
             $table->boolean('is_approved')->default(0);
-            $table->bollean('is_featured')->default(0);
+            $table->boolean('is_featured')->default(0);
             $table->string('reply_email')->nullable();
             $table->timestamps();
 
