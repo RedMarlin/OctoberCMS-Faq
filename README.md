@@ -102,7 +102,7 @@ featuredNumber = 10
 Displays list of newest questions with answers from all categories.
 
 ####Properties####
-* **questionNumber ** - Number of newest Q/A to show.
+* **questionNumber** - Number of newest Q/A to show.
 
 The default template contains div element with specially generated id to be an anchor for **FaqFeatured** component links.
 ```
