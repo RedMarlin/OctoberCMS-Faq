@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'Interactive Faq',
             'description' => 'Interactive Faq Plugin that allows your users ask questions directly from your webpage.',
             'author'      => 'RedMarlin',
-            'icon'        => 'icon-question-circle'
+            'icon'        => 'icon-comments'
         ];
     }
     
