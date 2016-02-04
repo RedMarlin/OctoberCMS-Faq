@@ -55,13 +55,13 @@ class Plugin extends PluginBase
             'faq' => [
                 'label'       => 'FAQ',
                 'url'         => Backend::url('redmarlin/faq/faq'),
-                'icon'        => 'icon-question-circle',
+                'icon'        => 'icon-comments',
                 'permissions' => ['redmarlin.faq.*'],
 
                 'sideMenu'    => [
                     'question' => [
                             'label' => 'Questions',
-                            'icon'        => ' icon-comments',
+                            'icon'        => 'icon-question-circle',
                             'url'         => Backend::url('redmarlin/faq/faq'),
                             'permissions' => ['redmarlin.faq.*']
 
