@@ -11,7 +11,3 @@ fields:
         label: Category
         description: Edit Category Title
         type: text
-    lang:
-        label: Language
-        description: Language iso code (2digits)
-        type: text

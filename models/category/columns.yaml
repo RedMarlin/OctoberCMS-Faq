@@ -7,4 +7,3 @@ columns:
         label: ID
         searchable: true
     title: Category
-    lang: Language
