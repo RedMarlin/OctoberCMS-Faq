@@ -63,7 +63,7 @@ class FaqAsk extends ComponentBase
         * Sending email to admin
         **/
         $params = compact('question');
-        Mail::send('faq::mail.asked',$params, function ($message) {
+        Mail::send('redmarlin.faq::mail.asked',$params, function ($message) {
             $message->to(MailSettings::get('sender_email'));
             $email = post('email');
         });
