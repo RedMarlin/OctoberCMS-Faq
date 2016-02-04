@@ -61,7 +61,7 @@ class Plugin extends PluginBase
                 'sideMenu'    => [
                     'question' => [
                             'label' => 'Questions',
-                            'icon'        => 'icon-question-circle',
+                            'icon'        => ' icon-comments',
                             'url'         => Backend::url('redmarlin/faq/faq'),
                             'permissions' => ['redmarlin.faq.*']
 
