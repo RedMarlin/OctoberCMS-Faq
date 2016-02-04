@@ -18,7 +18,8 @@ class Question extends Model
     public $rules = [
         'category_id' => 'integer|required',
         'is_approved' => 'boolean',
-        'is_featured' => 'boolean'
+        'is_featured' => 'boolean',
+        'answer' => ''
     ];
 
     /**
