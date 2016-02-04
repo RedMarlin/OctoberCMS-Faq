@@ -11,7 +11,7 @@ class FaqFeatured extends ComponentBase
     {
         return [
             'name'        => 'FAQ Latest Questions',
-            'description' => 'Displays X latest questions from all categories'
+            'description' => 'Displays X featured questions'
         ];
     }
 
