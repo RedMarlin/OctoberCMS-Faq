@@ -7,16 +7,19 @@ use Backend\Classes\Controller;
 use ApplicationException;
 use RedMarlin\Faq\Models\Question;
 use Mail;
+use Request;
 
 class Faq extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
+        'Backend.Behaviors.ReorderController',
 
     ];
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
+    public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = ['redmarlin.faq.access_faq'];
 
@@ -67,6 +70,17 @@ class Faq extends Controller
         }
         else { Flash::error('Invalid Email for notification.'); }
 
+    }
+    /**
+    * Show only Questions form given category for reordering
+    **/
+    public function reorderExtendQuery($query)
+    {
+        $segment = Request::segment(6);
+         if (filter_var($segment, FILTER_VALIDATE_INT)){
+            $query->where('category_id', $segment);
+        }
+          
     }
     
    

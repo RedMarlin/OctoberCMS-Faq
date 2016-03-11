@@ -26,16 +26,37 @@ class FaqList extends ComponentBase
              'type'              => 'string',
              'validationPattern' => '^[0-9]+$',
              'validationMessage' => 'The Category id property can contain only numeric symbols'
+            ],
+            'sortOrder' => [
+             'title'             => 'Sort Order',
+             'description'       => 'Choose sort ordering method. Default newest questions first',
+             'default'           => 'desc',
+             'type'              => 'dropdown',
+             'placeholder'       => 'Select sort order',
+             'options'           => ['desc'=>'Newest first', 'asc'=>'Newest last', 'order'=>'User order']
             ]
         ];
     }
      public function onRun()
     {
-        $this->faqs= Question::whereIsApproved('1')
-                    ->where('category_id', $this->property('categoryId'))
-                    ->orderBy('id', 'desc')
-                    ->with('category')
-                    ->get();
+     
+        $query = Question::whereIsApproved('1')->where('category_id', $this->property('categoryId'));
+        
+        switch ($this->property('sortOrder')) {
+            case "desc":
+                $query = $query->orderBy('id', 'desc');
+                break;
+            case "asc":
+                $query = $query->orderBy('id', 'asc');
+                break;
+            case "order":
+                $query = $query->orderBy('sort_order');
+                break;
+        }
+
+        $query = $query->orderBy('id', 'desc');
+        $this->faqs = $query->with('category')
+                       ->get();
 
         $this->page['category'] = Category::where('id', $this->property('categoryId'))->pluck('title');
 

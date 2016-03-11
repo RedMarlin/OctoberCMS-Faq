@@ -37,6 +37,14 @@ class Categories extends Controller
         }
         return $this->listRefresh();
     }
+    /**
+    *   When clicked on sort button, redirect to sort url with category filter.
+    **/
+     public function onLinkSort($recordId = null)
+    {
+        return Redirect::to('/backend/redmarlin/faq/faq/reorder/'.$recordId);
+    }
+    
     
    
 }

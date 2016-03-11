@@ -1,0 +1,15 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder Questions
+
+# Attribute name
+nameFrom: question
+
+# Model Class name
+modelClass: RedMarlin\Faq\Models\Question
+
+# Toolbar widget configuration
+toolbar:

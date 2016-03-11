@@ -24,6 +24,14 @@
                 data-load-indicator="Deleting Category..."
                 data-request-confirm="Do you really want to delete this category?">
             </button>
+            <button
+                type="button"
+                data-request="onLinkSort"
+                data-request-data="close:false"
+                data-load-indicator="Redirecting to sorting page..."
+                class="btn btn-default">
+                Reorder Questions in this category
+            </button>
             <span class="btn-text">
                 or <a href="<?= Backend::url('redmarlin/faq/categories') ?>">Cancel</a>
             </span>
