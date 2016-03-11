@@ -9,6 +9,7 @@ Interactive Faq System for OctoberCMS that lets your visitors submit questions d
 * Show featured Q/A
 * List Q/A for given category
 * List newest  Q/A 
+* Choose order of questions for FaqList component
   
 This plugin is limited but I plan on developing it in the future.  
 If you would like to have a specific feature please issue a ticket on github (Support Tab)  
@@ -55,6 +56,9 @@ To make questions visible on the page you need to turn on **Is Public** switch.
 You can also feature a Q/A by turning on **Is Featured** switch.  
   
 To notify you visitor about answer being published to his question first save the answer and then click on **"Notify about answer"** box. The notification will be send and email will be deleted form the DB. This prevents storing your visitors emails forever and sending twice the notification.  
+
+To sort questions for given category go to the category menu and then edit category. Click on the **Reorder Questions in this category** button.
+
 
   
 ##Components##
@@ -127,6 +131,7 @@ Displays list of Q/A from given category.
 
 ####Properties####
 * **categoryId** - Id of the category you want to show Q/A from
+* **sortOrder** - Choose order of questions. Asc - Older first, Desc - Newer first, order - User Order (Choosen in backend)
 
 ####Usage example####
 Page that lets you display all Q/A for given category. You can set category in URL. ie *faq/cartegory/1* will show all Q/A for category with id 1 (you can check category id in the backend in the Category list.)
