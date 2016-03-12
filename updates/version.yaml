@@ -1,6 +1,9 @@
 1.0.1: 
 - Added question sorting
+- Fixed menu highlighting
+- Controller naming and backend url corrected
 - sorting_questions_upgrade.php
+
 1.0.0: 
 - Initialize plugin
 - create_questions_table.php

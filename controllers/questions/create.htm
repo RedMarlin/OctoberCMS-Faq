@@ -26,7 +26,7 @@
                     Create and Close
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/faq') ?>">Cancel</a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/questions') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -35,5 +35,5 @@
 
 <?php else: ?>
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('redmarlin/faq/faq') ?>" class="btn btn-default">Back</a></p>
+    <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default">Back</a></p>
 <?php endif ?>

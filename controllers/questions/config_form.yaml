@@ -5,17 +5,17 @@
 name: FAQ Editor
 form: @/plugins/redmarlin/faq/models/question/fields.yaml
 modelClass: RedMarlin\Faq\Models\Question
-defaultRedirect: redmarlin/faq/faq
+defaultRedirect: redmarlin/faq/questions
 
 create:
     title: ADD Question
-    redirect: redmarlin/faq/faq/update/:id
-    redirectClose: redmarlin/faq/faq
+    redirect: redmarlin/faq/questions/update/:id
+    redirectClose: redmarlin/faq/questions
     flashSave: Question added correctly.
 
 update:
     title: Edit Question
-    redirect: redmarlin/faq/faq
-    redirectClose: redmarlin/faq/faq
+    redirect: redmarlin/faq/questions
+    redirectClose: redmarlin/faq/questions
     flashSave: QUESTION updated successfully!
     flashDelete: Question has been deleted.

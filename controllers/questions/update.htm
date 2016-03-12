@@ -26,7 +26,7 @@
                 Delete
             </button>
             <span class="btn-text">
-                or <a href="<?= Backend::url('redmarlin/faq/faq') ?>">Cancel</a>
+                or <a href="<?= Backend::url('redmarlin/faq/questions') ?>">Cancel</a>
             </span>
         </div>
         <button
@@ -46,6 +46,6 @@
             <?= Block::placeholder('breadcrumb') ?>
         </div>
         <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-        <p><a href="<?= Backend::url('redmarlin/faq/faq') ?>" class="btn btn-default">Back</a></p>
+        <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default">Back</a></p>
     </div>
 <?php endif ?>

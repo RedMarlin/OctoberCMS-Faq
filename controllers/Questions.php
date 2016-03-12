@@ -9,7 +9,7 @@ use RedMarlin\Faq\Models\Question;
 use Mail;
 use Request;
 
-class Faq extends Controller
+class Questions extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',

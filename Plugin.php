@@ -54,7 +54,7 @@ class Plugin extends PluginBase
         return [
             'faq' => [
                 'label'       => 'FAQ',
-                'url'         => Backend::url('redmarlin/faq/faq'),
+                'url'         => Backend::url('redmarlin/faq/questions'),
                 'icon'        => 'icon-comments',
                 'permissions' => ['redmarlin.faq.*'],
 
@@ -62,7 +62,7 @@ class Plugin extends PluginBase
                     'questions' => [
                             'label' => 'Questions',
                             'icon'        => 'icon-question-circle',
-                            'url'         => Backend::url('redmarlin/faq/faq'),
+                            'url'         => Backend::url('redmarlin/faq/questions'),
                             'permissions' => ['redmarlin.faq.*']
 
                     ],

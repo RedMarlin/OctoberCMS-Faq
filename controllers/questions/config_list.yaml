@@ -5,7 +5,7 @@
 title: Faq
 list: @/plugins/redmarlin/faq/models/question/columns.yaml
 modelClass: RedMarlin\Faq\Models\Question
-recordUrl: redmarlin/faq/faq/update/:id
+recordUrl: redmarlin/faq/questions/update/:id
 recordsPerPage: 20
 showSetup: true
 showCheckboxes: true

@@ -42,7 +42,7 @@ class Categories extends Controller
     **/
      public function onLinkSort($recordId = null)
     {
-        return Redirect::to('/backend/redmarlin/faq/faq/reorder/'.$recordId);
+        return Redirect::to('/backend/redmarlin/faq/questions/reorder/'.$recordId);
     }
     
     
