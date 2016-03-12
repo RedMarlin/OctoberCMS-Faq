@@ -59,14 +59,14 @@ class Plugin extends PluginBase
                 'permissions' => ['redmarlin.faq.*'],
 
                 'sideMenu'    => [
-                    'question' => [
+                    'questions' => [
                             'label' => 'Questions',
                             'icon'        => 'icon-question-circle',
                             'url'         => Backend::url('redmarlin/faq/faq'),
                             'permissions' => ['redmarlin.faq.*']
 
                     ],
-                    'category' => [
+                    'categories' => [
                             'label' => 'Categories',
                             'icon'        => 'icon-list-ul',
                             'url'         => Backend::url('redmarlin/faq/categories'),

@@ -26,7 +26,7 @@ class Faq extends Controller
      public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('RedMarlin.Faq', 'faq', 'faq');
+        BackendMenu::setContext('RedMarlin.Faq', 'faq', 'questions');
     }
     public function index_onDelete()
     {
