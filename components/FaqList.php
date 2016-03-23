@@ -33,7 +33,7 @@ class FaqList extends ComponentBase
              'default'           => 'desc',
              'type'              => 'dropdown',
              'placeholder'       => 'Select sort order',
-             'options'           => ['desc'=>'Newest first', 'asc'=>'Latest last', 'order'=>'User order']
+             'options'           => ['desc'=>'Newest first', 'asc'=>'Oldest first', 'order'=>'User order']
             ]
         ];
     }
