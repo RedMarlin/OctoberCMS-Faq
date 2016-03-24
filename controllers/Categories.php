@@ -6,6 +6,7 @@ use BackendMenu;
 use Backend\Classes\Controller;
 use ApplicationException;
 use RedMarlin\Faq\Models\Category;
+use Backend;
 
 class Categories extends Controller
 {
@@ -42,7 +43,8 @@ class Categories extends Controller
     **/
      public function onLinkSort($recordId = null)
     {
-        return Redirect::to('/backend/redmarlin/faq/questions/reorder/'.$recordId);
+        $url = Backend::url('redmarlin/faq/questions/reorder');
+        return Redirect::to($url.'/'.$recordId);
     }
     
     
