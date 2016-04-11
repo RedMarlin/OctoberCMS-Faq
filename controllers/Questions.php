@@ -53,7 +53,7 @@ class Questions extends Controller
             $questionid = $recordId;
             $params = compact('question','answer','questionid');
         
-            Mail::send('faq::mail.replied',$params, function ($message) use ($reply_email) {
+            Mail::send('redmarlin.faq::mail.replied',$params, function ($message) use ($reply_email) {
                     $message->to($reply_email);
                 });
             
