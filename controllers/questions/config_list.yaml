@@ -3,7 +3,7 @@
 # ===================================
 
 title: Faq
-list: @/plugins/redmarlin/faq/models/question/columns.yaml
+list: ~/plugins/redmarlin/faq/models/question/columns.yaml
 modelClass: RedMarlin\Faq\Models\Question
 recordUrl: redmarlin/faq/questions/update/:id
 recordsPerPage: 20
