@@ -3,7 +3,7 @@
 # ===================================
 
 name: FAQ Categories Editor
-form: @/plugins/redmarlin/faq/models/category/fields.yaml
+form: ~/plugins/redmarlin/faq/models/category/fields.yaml
 modelClass: RedMarlin\Faq\Models\Category
 defaultRedirect: redmarlin/faq/categories
 
