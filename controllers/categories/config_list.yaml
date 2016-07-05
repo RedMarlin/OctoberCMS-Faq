@@ -3,7 +3,7 @@
 # ===================================
 
 title: Faq Categories
-list: @/plugins/redmarlin/faq/models/category/columns.yaml
+list: ~/plugins/redmarlin/faq/models/category/columns.yaml
 modelClass: RedMarlin\Faq\Models\Category
 recordUrl: redmarlin/faq/categories/update/:id
 recordsPerPage: 20
