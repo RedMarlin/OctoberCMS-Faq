@@ -3,7 +3,7 @@
 # ===================================
 
 name: FAQ Editor
-form: @/plugins/redmarlin/faq/models/question/fields.yaml
+form: ~/plugins/redmarlin/faq/models/question/fields.yaml
 modelClass: RedMarlin\Faq\Models\Question
 defaultRedirect: redmarlin/faq/questions
 
