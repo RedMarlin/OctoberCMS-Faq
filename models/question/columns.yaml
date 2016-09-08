@@ -8,7 +8,13 @@ columns:
         searchable: true
     question: Question
     answer: Answer
-    category_id: Category
+    category_id: 
+        label: Category
+        type: text
+        searchable: true
+        sortable: true
+        relation: category
+        select: title
     is_approved:
          label: Public
          type: Switch
