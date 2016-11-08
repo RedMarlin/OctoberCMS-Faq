@@ -21,6 +21,11 @@ class Question extends Model
         'is_featured' => 'boolean',
         'answer' => ''
     ];
+     
+    /**
+     * @var array Translatable fields
+     */
+    public $translatable = ['question', 'answer'];
 
     /**
      * @var array Guarded fields
@@ -30,7 +35,7 @@ class Question extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['text', 'answer'];
+    protected $fillable = ['question', 'answer'];
 
     /**
      * @var array Relations
@@ -38,6 +43,29 @@ class Question extends Model
      public $belongsTo = [
         'category' => 'RedMarlin\Faq\Models\Category'
     ];
+     
+     /**
+     * Add translation support to this model, if available.
+     * @return void
+     */
+    public static function boot()
+    {
+        // Call default functionality (required)
+        parent::boot();
+
+        // Check the translate plugin is installed
+        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
+            return;
+        }
+
+        // Extend the constructor of the model
+        self::extend(function ($model) {
+
+            // Implement the translatable behavior
+            $model->implement[] = 'RainLab.Translate.Behaviors.TranslatableModel';
+
+        });
+    }
   
 
 }
