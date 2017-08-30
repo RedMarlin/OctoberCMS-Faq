@@ -9,6 +9,7 @@ Interactive Faq System for OctoberCMS that lets your visitors submit questions d
 * Show featured Q/A
 * List Q/A for given category
 * List newest  Q/A 
+* List all Q/A from all categories
 * Choose order of questions for FaqList component
   
 This plugin is limited but I plan on developing it in the future.  
@@ -17,7 +18,7 @@ If you would like to have a specific feature please issue a ticket on github (Su
 ###TODO list###
 * Component for listing categories links
 * Component for listing random/newest Question links
-* Translations support
+
   
 
 ##Installation##
@@ -158,7 +159,24 @@ categoryId = {{ :catid }}
     </ul>
 </div>
 ```
-  
+##FaqAll##
+Displays list of Q/A from all categories. 
+
+####Properties####
+* **limit** - limit list to X entries
+* **sortOrder** - Choose order of questions. Asc - Older first, Desc - Newer first, order - User Order (Choosen in backend)
+
+####Usage example####
+Page that lets you display 25 last Q/A from all categories. If you need to show more questions just set limit to something big enough, like 999.
+```
+[FaqAll]
+limit = 25
+==
+ <div>
+  <h2>Questions</h2>
+   {% component 'FaqAll' %}
+ </div>
+```  
 
 If you have any questions just Ask!  
  You can contact us on:
