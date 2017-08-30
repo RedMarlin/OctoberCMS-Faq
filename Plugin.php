@@ -30,6 +30,7 @@ class Plugin extends PluginBase
             'RedMarlin\Faq\Components\FaqAsk' => 'FaqAsk',
             'RedMarlin\Faq\Components\FaqLast' => 'FaqLast',
             'RedMarlin\Faq\Components\FaqFeatured' => 'FaqFeatured',
+            'RedMarlin\Faq\Components\FaqAll' => 'FaqAll',
     ];
     }
     

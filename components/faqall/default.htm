@@ -1,0 +1,12 @@
+{% set faqs = __SELF__.faqs %}
+<ul>
+ 	{% for faq in faqs %}
+		<li>
+			<div id="question_{{ faq.id }}">
+				<h3>Q: {{ faq.question }}</h3>
+				<span>{{ faq.created_at|date("d-m-Y")}}</span>
+				<span>{{ faq.answer|md }} </span>	
+			</div>
+ 		</li>
+ 	{% endfor %}
+ </ul>
