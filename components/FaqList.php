@@ -11,7 +11,7 @@ class FaqList extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ Category list',
+            'name'        => 'FAQ by Category',
             'description' => 'Displays list of FAQs for given category'
         ];
     }
@@ -58,7 +58,7 @@ class FaqList extends ComponentBase
         $this->faqs = $query->with('category')
                        ->get();
 
-        $this->page['category'] = Category::where('id', $this->property('categoryId'))->pluck('title');
+        $this->page['category'] = Category::where('id', $this->property('categoryId'))->value('title');
 
     }
 

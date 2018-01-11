@@ -2,7 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use RedMarlin\Faq\Models\Question;
-use System\Models\MailSettings as MailSettings;
+use System\Models\MailSetting as MailSettings;
 use Flash;
 use Event;
 use Request;

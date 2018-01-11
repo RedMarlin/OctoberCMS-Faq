@@ -1,3 +1,7 @@
+1.0.9: Various bug fixes
+- Fixed bug with Category update #12
+- MailSettings library name change to MailSetting
+- Adapt to Laravel 5.2
 1.0.8: Added Component to list all questions from all categories
 1.0.7: Added Translation support by MilosStanic
 1.0.6: Patch by kubis, show Category name istead of Category ID in backend

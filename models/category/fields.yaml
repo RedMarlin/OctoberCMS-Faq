@@ -11,3 +11,7 @@ fields:
         label: Category
         description: Edit Category Title
         type: text
+    lang:
+        label: Language
+        description: Optional category language (leave empty if you use Rainlab Translate plugin)
+        type: text

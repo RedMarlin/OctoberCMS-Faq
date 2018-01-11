@@ -10,7 +10,7 @@ class FaqFeatured extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ Latest Questions',
+            'name'        => 'FAQ Featured Questions',
             'description' => 'Displays featured questions links'
         ];
     }
