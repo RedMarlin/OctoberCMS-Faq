@@ -1,4 +1,4 @@
-1.0.9: Various bug fixes
+1.0.9:
 - Fixed bug with Category update #12
 - MailSettings library name change to MailSetting
 - Adapt to Laravel 5.2
