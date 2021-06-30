@@ -2,20 +2,20 @@
 #  Form Behavior Config
 # ===================================
 
-name: FAQ Editor
+name: 'redmarlin.faq::lang.common.question'
 form: ~/plugins/redmarlin/faq/models/question/fields.yaml
 modelClass: RedMarlin\Faq\Models\Question
 defaultRedirect: redmarlin/faq/questions
 
 create:
-    title: ADD Question
+    title: 'redmarlin.faq::lang.titles.question.create'
     redirect: redmarlin/faq/questions/update/:id
     redirectClose: redmarlin/faq/questions
-    flashSave: Question added correctly.
+    flashSave: 'redmarlin.faq::lang.titles.question.added'
 
 update:
-    title: Edit Question
+    title: 'redmarlin.faq::lang.titles.question.update'
     redirect: redmarlin/faq/questions
     redirectClose: redmarlin/faq/questions
-    flashSave: QUESTION updated successfully!
-    flashDelete: Question has been deleted.
+    flashSave: 'redmarlin.faq::lang.titles.question.saved'
+    flashDelete: 'redmarlin.faq::lang.titles.question.deleted'

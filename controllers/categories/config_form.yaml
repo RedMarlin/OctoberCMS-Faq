@@ -2,20 +2,20 @@
 #  Form Behavior Config
 # ===================================
 
-name: FAQ Categories Editor
+name: 'redmarlin.faq::lang.common.category'
 form: ~/plugins/redmarlin/faq/models/category/fields.yaml
 modelClass: RedMarlin\Faq\Models\Category
 defaultRedirect: redmarlin/faq/categories
 
 create:
-    title: Add Category
+    title: 'redmarlin.faq::lang.titles.category.create'
     redirect: redmarlin/faq/categories/update/:id
     redirectClose: redmarlin/faq/categories
-    flashSave: Category added correctly.
+    flashSave: 'redmarlin.faq::lang.titles.category.added'
 
 update:
-    title: Edit Category
+    title: 'redmarlin.faq::lang.titles.category.update'
     redirect: redmarlin/faq/categories
     redirectClose: redmarlin/faq/categories
-    flashSave: Category updated successfully!
-    flashDelete: Category has been deleted.
+    flashSave: 'redmarlin.faq::lang.titles.category.saved'
+    flashDelete: 'redmarlin.faq::lang.titles.category.deleted'

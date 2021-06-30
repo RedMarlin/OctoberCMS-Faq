@@ -1,3 +1,10 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('redmarlin/faq/questions') ?>"><?= e(trans('redmarlin.faq::lang.common.questions')) ?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
 <?php if (!$this->fatalError): ?>
 
     <?= Form::open(['class'=>'layout-item stretch layout-column']) ?>
@@ -13,7 +20,7 @@
                     data-hotkey-mac="cmd+s"
                     data-load-indicator="<?= e(trans('backend::lang.form.creating')) ?>"
                     class="btn btn-primary">
-                    Save
+                    <?= e(trans('backend::lang.form.create')) ?>
                 </button>
                 <button
                     type="button"
@@ -23,10 +30,10 @@
                     data-hotkey-mac="cmd+enter"
                     data-load-indicator="<?= e(trans('backend::lang.form.creating')) ?>"
                     class="btn btn-default">
-                    Create and Close
+                    <?= e(trans('backend::lang.form.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/questions') ?>">Cancel</a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/questions') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -35,5 +42,5 @@
 
 <?php else: ?>
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default">Back</a></p>
+    <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
 <?php endif ?>

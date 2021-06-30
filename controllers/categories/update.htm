@@ -1,50 +1,58 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('redmarlin/faq/categories') ?>"><?= e(trans('redmarlin.faq::lang.common.categories')) ?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
 
 <?php if (!$this->fatalError): ?>
-<?= Form::open(['class'=>'layout']) ?>
 
-    <div class="layout-row">
-        <?= $this->formRender() ?>
-    </div>
+    <?= Form::open(['class'=>'layout']) ?>
 
-    <div class="form-buttons">
-        <div class="loading-indicator-container">
-            <button
-                type="button"
-                data-request="onSave"
-                data-request-data="close:true"
-                data-hotkey="ctrl+enter, cmd+enter"
-                data-load-indicator="Saving Category..."
-                class="btn btn-default">
-                Save and Close
-            </button>
-            <button
-                type="button"
-                class="oc-icon-trash-o btn-icon danger pull-right"
-                data-request="onDelete"
-                data-load-indicator="Deleting Category..."
-                data-request-confirm="Do you really want to delete this category?">
-            </button>
-            <button
-                type="button"
-                data-request="onLinkSort"
-                data-request-data="close:false"
-                data-load-indicator="Redirecting to sorting page..."
-                class="btn btn-default">
-                Reorder Questions in this category
-            </button>
-            <span class="btn-text">
-                or <a href="<?= Backend::url('redmarlin/faq/categories') ?>">Cancel</a>
-            </span>
+        <div class="layout-row">
+            <?= $this->formRender() ?>
         </div>
-    </div>
 
-<?= Form::close() ?>
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:true"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
+                    class="btn btn-default">
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
+                </button>
+                <button
+                    type="button"
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="<?= e(trans('backend::lang.form.deleting')) ?>"
+                    data-request-confirm="<?= e(trans('backend::lang.form.confirm_delete')) ?>">
+                </button>
+                <button
+                    type="button"
+                    data-request="onLinkSort"
+                    data-request-data="close:false"
+                    data-load-indicator="<?= e(trans('redmarlin.faq::lang.messages.reorder')) ?>"
+                    class="btn btn-default">
+                    <?= e(trans('redmarlin.faq::lang.buttons.reorder')) ?>
+                </button>
+                <span class="btn-text">
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/categories') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                </span>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
 <?php else: ?>
     <div class="padded-container">
         <div class="control-breadcrumb">
             <?= Block::placeholder('breadcrumb') ?>
         </div>
         <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-        <p><a href="<?= Backend::url('redmarlin/faq/categories') ?>" class="btn btn-default">Back</a></p>
+        <p><a href="<?= Backend::url('redmarlin/faq/categories') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
     </div>
 <?php endif ?>

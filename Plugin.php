@@ -17,29 +17,30 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Interactive Faq',
-            'description' => 'Interactive Faq Plugin that allows your users ask questions directly from your webpage.',
+            'name'        => 'redmarlin.faq::lang.plugin.name',
+            'description' => 'redmarlin.faq::lang.plugin.description',
             'author'      => 'RedMarlin',
             'icon'        => 'icon-comments'
         ];
     }
-    
-    public function registerComponents(){
-    return [
+
+    public function registerComponents()
+    {
+        return [
             'RedMarlin\Faq\Components\FaqList' => 'FaqList',
             'RedMarlin\Faq\Components\FaqAsk' => 'FaqAsk',
             'RedMarlin\Faq\Components\FaqLast' => 'FaqLast',
             'RedMarlin\Faq\Components\FaqFeatured' => 'FaqFeatured',
             'RedMarlin\Faq\Components\FaqAll' => 'FaqAll',
-    ];
+        ];
     }
-    
+
     public function registerPermissions()
     {
         return [
             'redmarlin.faq.access_faq' => [
-                'tab' => 'Faq',
-                'label' => 'Access and manage Faq'
+                'tab' => 'redmarlin.faq::lang.permissions.tab',
+                'label' => 'redmarlin.faq::lang.permissions.label'
             ],
         ];
     }
@@ -54,21 +55,21 @@ class Plugin extends PluginBase
     {
         return [
             'faq' => [
-                'label'       => 'FAQ',
+                'label'       => 'redmarlin.faq::lang.common.faq',
                 'url'         => Backend::url('redmarlin/faq/questions'),
                 'icon'        => 'icon-comments',
                 'permissions' => ['redmarlin.faq.*'],
 
                 'sideMenu'    => [
                     'questions' => [
-                            'label' => 'Questions',
+                            'label' => 'redmarlin.faq::lang.common.questions',
                             'icon'        => 'icon-question-circle',
                             'url'         => Backend::url('redmarlin/faq/questions'),
                             'permissions' => ['redmarlin.faq.*']
 
                     ],
                     'categories' => [
-                            'label' => 'Categories',
+                            'label' => 'redmarlin.faq::lang.common.categories',
                             'icon'        => 'icon-list-ul',
                             'url'         => Backend::url('redmarlin/faq/categories'),
                             'permissions' => ['redmarlin.faq.*']
@@ -77,6 +78,4 @@ class Plugin extends PluginBase
             ]
         ];
     }
-
-
 }

@@ -11,37 +11,41 @@ class FaqList extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ by Category',
-            'description' => 'Displays list of FAQs for given category'
+            'name'        => 'redmarlin.faq::lang.components.faqlist.name',
+            'description' => 'redmarlin.faq::lang.components.faqlist.description'
         ];
     }
 
     public function defineProperties()
     {
         return [
-             'categoryId' => [
-             'title'             => 'Category id',
-             'description'       => 'List all questions from given category',
-             'default'           => 1,
-             'type'              => 'string',
-             'validationPattern' => '^[0-9]+$',
-             'validationMessage' => 'The Category id property can contain only numeric symbols'
+            'categoryId' => [
+                'title'             => 'redmarlin.faq::lang.components.faqlist.category.title',
+                'description'       => 'redmarlin.faq::lang.components.faqlist.category.description',
+                'default'           => 1,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'redmarlin.faq::lang.components.faqlist.category.validation'
             ],
             'sortOrder' => [
-             'title'             => 'Sort Order',
-             'description'       => 'Choose sort ordering method. Default newest questions first',
-             'default'           => 'desc',
-             'type'              => 'dropdown',
-             'placeholder'       => 'Select sort order',
-             'options'           => ['desc'=>'Newest first', 'asc'=>'Oldest first', 'order'=>'User order']
+                'title'             => 'redmarlin.faq::lang.sorting.title',
+                'description'       => 'redmarlin.faq::lang.sorting.description',
+                'default'           => 'desc',
+                'type'              => 'dropdown',
+                'placeholder'       => 'redmarlin.faq::lang.sorting.placeholder',
+                'options'           => [
+                    'desc' => 'redmarlin.faq::lang.sorting.desc',
+                    'asc' => 'redmarlin.faq::lang.sorting.asc',
+                    'order' => 'redmarlin.faq::lang.sorting.order',
+                ]
             ]
         ];
     }
-     public function onRun()
+
+    public function onRun()
     {
-     
         $query = Question::whereIsApproved('1')->where('category_id', $this->property('categoryId'));
-        
+
         switch ($this->property('sortOrder')) {
             case "desc":
                 $query = $query->orderBy('id', 'desc');
@@ -59,8 +63,5 @@ class FaqList extends ComponentBase
                        ->get();
 
         $this->page['category'] = Category::where('id', $this->property('categoryId'))->value('title');
-
     }
-
-
 }

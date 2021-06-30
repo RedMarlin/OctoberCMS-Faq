@@ -1,0 +1,29 @@
+{
+    "name": "redmarlin/oc-faq-plugin",
+    "type": "october-plugin",
+    "description": "Interactive Faq for October CMS",
+    "homepage": "https://github.com/RedMarlin/OctoberCMS-Faq",
+    "keywords": ["october", "octobercms", "faq", "question", "aswer"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": " Jozef Popiel",
+            "role": "Original Author"
+        },
+        {
+            "name": "Damien MATHIEU - DamsFX",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/RedMarlin/OctoberCMS-Faq/issues",
+        "source": "https://github.com/RedMarlin/OctoberCMS-Faq"
+    },
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "faq"
+    }
+}

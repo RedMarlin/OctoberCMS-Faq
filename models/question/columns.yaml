@@ -6,21 +6,21 @@ columns:
     id:
         label: ID
         searchable: true
-    question: Question
-    answer: Answer
-    category_id: 
-        label: Category
+    question: redmarlin.faq::lang.common.question
+    answer: redmarlin.faq::lang.question.answer
+    category_id:
+        label: redmarlin.faq::lang.common.category
         type: text
         searchable: true
         sortable: true
         relation: category
         select: title
     is_approved:
-         label: Public
+         label: redmarlin.faq::lang.question.approved
          type: Switch
     is_featured:
-         label: Featured
+         label: redmarlin.faq::lang.question.featured
          type: Switch
     reply_email:
-         label: N. Email
-    created_at: Date
+         label: redmarlin.faq::lang.question.reply_email
+    created_at: redmarlin.faq::lang.common.date

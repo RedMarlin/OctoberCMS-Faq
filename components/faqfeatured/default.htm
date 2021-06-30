@@ -1,10 +1,9 @@
 {% set faqsfeatured = __SELF__.faqsfeatured %}
 <div>
- 	<h3>Hot Questions</h3>
+ 	<h3><?= e(trans('redmarlin.faq::lang.components.faqfeatured.hot')) ?></h3>
     <ul>
         {% for faqfeatured in faqsfeatured %}
       		<li><a href="/faq/{{ faqfeatured.id }}#question-{{ faqfeatured.id }}">{{ faqfeatured.question }}</a></li>
         {% endfor %}
     </ul>
-              
  </div>

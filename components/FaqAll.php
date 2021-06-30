@@ -11,37 +11,41 @@ class FaqAll extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ - Display All',
-            'description' => 'Displays list of FAQs from all categories'
+            'name'        => 'redmarlin.faq::lang.components.faqall.name',
+            'description' => 'redmarlin.faq::lang.components.faqall.description'
         ];
     }
 
     public function defineProperties()
     {
         return [
-             'limit' => [
-             'title'             => 'Limit',
-             'description'       => 'Limit list to X questions',
-             'default'           => 25,
-             'type'              => 'string',
-             'validationPattern' => '^[0-9]+$',
-             'validationMessage' => 'The Limit property can contain only numeric symbols'
+            'limit' => [
+                'title'             => 'redmarlin.faq::lang.components.faqall.limit.title',
+                'description'       => 'redmarlin.faq::lang.components.faqall.limit.description',
+                'default'           => 25,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'redmarlin.faq::lang.components.faqall.limit.validation'
             ],
             'sortOrder' => [
-             'title'             => 'Sort Order',
-             'description'       => 'Choose sort ordering method. Default newest questions first',
-             'default'           => 'desc',
-             'type'              => 'dropdown',
-             'placeholder'       => 'Select sort order',
-             'options'           => ['desc'=>'Newest first', 'asc'=>'Oldest first', 'order'=>'User order']
+                'title'             => 'redmarlin.faq::lang.sorting.title',
+                'description'       => 'redmarlin.faq::lang.sorting.description',
+                'default'           => 'desc',
+                'type'              => 'dropdown',
+                'placeholder'       => 'redmarlin.faq::lang.sorting.placeholder',
+                'options'           => [
+                    'desc' => 'redmarlin.faq::lang.sorting.desc',
+                    'asc' => 'redmarlin.faq::lang.sorting.asc',
+                    'order' => 'redmarlin.faq::lang.sorting.order',
+                ]
             ]
         ];
     }
-     public function onRun()
+
+    public function onRun()
     {
-     
         $query = Question::whereIsApproved('1');
-        
+
         switch ($this->property('sortOrder')) {
             case "desc":
                 $query = $query->orderBy('id', 'desc');
@@ -54,12 +58,6 @@ class FaqAll extends ComponentBase
                 break;
         }
 
-        
         $this->faqs = $query->take($this->property('limit'))->get();
-
-        
-
     }
-
-
 }

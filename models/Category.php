@@ -1,8 +1,8 @@
 <?php namespace RedMarlin\Faq\Models;
 
-use Model;
 use DB;
-
+use Model;
+use RainLab\Translate\Models\Locale;
 
 /**
  * Answer Model
@@ -10,6 +10,10 @@ use DB;
 class Category extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+
+    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['title'];
+
     /**
      * @var string The database table used by the model.
      */
@@ -19,17 +23,12 @@ class Category extends Model
         'title' => 'required',
         'lang' => 'string',
     ];
-    
-    /**
-     * @var array Translatable fields
-     */
-    public $translatable = ['title'];
-    
+
     /**
      * @var array Guarded fields
      */
     protected $guarded = ['*'];
-    
+
     /**
      * @var array Fillable fields
      */
@@ -41,8 +40,8 @@ class Category extends Model
     public $hasMany = [
         'question' => 'RedMarlin\Faq\Models\Question'
     ];
-    public $timestamps = false; 
-    
+    public $timestamps = false;
+
     /**
      * Add translation support to this model, if available.
      * @return void
@@ -51,19 +50,5 @@ class Category extends Model
     {
         // Call default functionality (required)
         parent::boot();
-
-        // Check the translate plugin is installed
-        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
-            return;
-        }
-
-        // Extend the constructor of the model
-        self::extend(function ($model) {
-
-            // Implement the translatable behavior
-            $model->implement[] = 'RainLab.Translate.Behaviors.TranslatableModel';
-
-        });
     }
-
 }
