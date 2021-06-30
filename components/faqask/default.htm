@@ -1,9 +1,9 @@
-	{{ form_open({ request: 'onPost' }) }}
-        {% flash %}
-            <div class="alert alert-{{ type }}">{{ message }}</div>
-        {% endflash %}
-        <textarea name="question" rows="3">Question</textarea> 
-        <input type="text" value="Email" name="email">
-        <input type="submit" value="Send"/>
-    {{ form_close() }}
+{{ form_open({ request: 'onPost' }) }}
+    {% flash %}
+        <div class="alert alert-{{ type }}">{{ message }}</div>
+    {% endflash %}
+    <textarea name="question" rows="3">Question</textarea>
+    <input type="text" value="Email" name="email">
+    <input type="submit" value="{{ 'redmarlin.faq::lang.buttons.send' | trans }}"/>
+{{ form_close() }}
 

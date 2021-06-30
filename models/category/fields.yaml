@@ -8,10 +8,10 @@ fields:
         disabled: true
         hidden: true
     title:
-        label: Category
-        description: Edit Category Title
+        label: redmarlin.faq::lang.common.category
+        comment: redmarlin.faq::lang.category.category_comment
         type: text
     lang:
-        label: Language
-        description: Optional category language (leave empty if you use Rainlab Translate plugin)
+        label: redmarlin.faq::lang.category.lang
+        comment: redmarlin.faq::lang.category.lang_comment
         type: text

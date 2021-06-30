@@ -1,51 +1,57 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('redmarlin/faq/questions') ?>"><?= e(trans('redmarlin.faq::lang.common.questions')) ?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
 
 <?php if (!$this->fatalError): ?>
-<?= Form::open(['class'=>'layout']) ?>
+    <?= Form::open(['class'=>'layout']) ?>
 
-    <div class="layout-row">
-        <?= $this->formRender() ?>
-    </div>
-
-    <div class="form-buttons">
-        <div class="loading-indicator-container">
-            <button
-                type="button"
-                data-request="onSave"
-                data-request-data="close:true"
-                data-hotkey="ctrl+enter, cmd+enter"
-                data-load-indicator="Saving Question..."
-                class="btn btn-default">
-                Save and Close
-            </button>
-            <button
-                type="button"
-                class="oc-icon-trash-o btn-icon danger pull-right"
-                data-request="onDelete"
-                data-load-indicator="Deleting Question..."
-                data-request-confirm="Do you really want to delete this category?">
-                Delete
-            </button>
-            <span class="btn-text">
-                or <a href="<?= Backend::url('redmarlin/faq/questions') ?>">Cancel</a>
-            </span>
+        <div class="layout-row">
+            <?= $this->formRender() ?>
         </div>
-        <button
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:true"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
+                    class="btn btn-default">
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
+                </button>
+                <button
+                    type="button"
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="<?= e(trans('backend::lang.form.deleting')) ?>"
+                    data-request-confirm="<?= e(trans('backend::lang.form.confirm_delete')) ?>">
+                </button>
+                <span class="btn-text">
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('redmarlin/faq/questions') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                </span>
+            </div>
+            <button
                 type="button"
                 data-request="onNotify"
                 data-request-data="close:false"
-                data-load-indicator="Notifying about answer..."
+                data-load-indicator="<?= e(trans('redmarlin.faq::lang.messages.notify')) ?>"
                 class="btn btn-default">
-                Notify about answer
+                <?= e(trans('redmarlin.faq::lang.buttons.notify')) ?>
             </button>
-    </div>
+        </div>
 
-<?= Form::close() ?>
+    <?= Form::close() ?>
+
 <?php else: ?>
     <div class="padded-container">
         <div class="control-breadcrumb">
             <?= Block::placeholder('breadcrumb') ?>
         </div>
         <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-        <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default">Back</a></p>
+        <p><a href="<?= Backend::url('redmarlin/faq/questions') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
     </div>
 <?php endif ?>

@@ -10,33 +10,31 @@ class FaqFeatured extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ Featured Questions',
-            'description' => 'Displays featured questions links'
+            'name'        => 'redmarlin.faq::lang.components.faqfeatured.name',
+            'description' => 'redmarlin.faq::lang.components.faqfeatured.description'
         ];
     }
 
     public function defineProperties()
     {
         return [
-             'featuredNumber' => [
-             'title'             => 'Number of Questions',
-             'description'       => 'Show X Featured Questions',
-             'default'           => 5,
-             'type'              => 'string',
-             'validationPattern' => '^[0-9]+$',
-             'validationMessage' => 'The Question Number property can contain only numeric symbols'
+            'featuredNumber' => [
+                'title'             => 'redmarlin.faq::lang.components.faqfeatured.number.title',
+                'description'       => 'redmarlin.faq::lang.components.faqfeatured.number.description',
+                'default'           => 5,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'redmarlin.faq::lang.components.faqfeatured.number.validation'
             ]
         ];
     }
-     public function onRun()
+
+    public function onRun()
     {
         $this->faqsfeatured = Question::whereIsApproved('1')
                                 ->whereIsFeatured('1')
                                 ->orderBy('id', 'desc')
-                                ->take($this->property['featuredNumber'])
+                                ->take($this->property('featuredNumber'))
                                 ->get();
-       
     }
-
-
 }

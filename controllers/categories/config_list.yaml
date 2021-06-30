@@ -2,7 +2,7 @@
 #  List Behavior Config
 # ===================================
 
-title: Faq Categories
+title: 'redmarlin.faq::lang.titles.category.list'
 list: ~/plugins/redmarlin/faq/models/category/columns.yaml
 modelClass: RedMarlin\Faq\Models\Category
 recordUrl: redmarlin/faq/categories/update/:id

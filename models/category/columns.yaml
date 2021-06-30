@@ -6,4 +6,4 @@ columns:
     id:
         label: ID
         searchable: true
-    title: Category
+    title: redmarlin.faq::lang.common.category

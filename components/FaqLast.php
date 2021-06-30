@@ -11,32 +11,31 @@ class FaqLast extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FAQ Latest Questions',
-            'description' => 'Displays latest questions'
+            'name'        => 'redmarlin.faq::lang.components.faqlast.name',
+            'description' => 'redmarlin.faq::lang.components.faqlast.description'
         ];
     }
 
     public function defineProperties()
     {
         return [
-             'questionNumber' => [
-             'title'             => 'Number of Questions',
-             'description'       => 'Show X last questions',
-             'default'           => 5,
-             'type'              => 'string',
-             'validationPattern' => '^[0-9]+$',
-             'validationMessage' => 'The Question number property can contain only numeric symbols'
+            'questionNumber' => [
+                'title'             => 'redmarlin.faq::lang.components.faqlast.number.title',
+                'description'       => 'redmarlin.faq::lang.components.faqlast.number.description',
+                'default'           => 5,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'redmarlin.faq::lang.components.faqlast.number.validation'
             ]
         ];
     }
-     public function onRun()
+
+    public function onRun()
     {
         $this->faqs = Question::whereIsApproved('1')
                         ->orderBy('id', 'desc')
                         ->with('category')
-                        ->take($this->property['questionNumber'])
+                        ->take($this->property('questionNumber'))
                         ->get();
     }
-
-
 }

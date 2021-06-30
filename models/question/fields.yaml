@@ -8,33 +8,33 @@ fields:
         disabled: true
         hidden: true
     category:
-        label: Category
+        label: redmarlin.faq::lang.common.category
         type: relation
         nameFrom: title
-        span: right  
+        span: right
     is_approved:
-        label: Is Public?
-        description: Make this Question visible on the site
+        label: redmarlin.faq::lang.question.is_approved
+        comment:  redmarlin.faq::lang.question.is_approved_comment
         type: switch
         span: left
     is_featured:
-        label: Is Featured?
-        description: Make this Question Featured
+        label: redmarlin.faq::lang.question.is_featured
+        comment: redmarlin.faq::lang.question.is_featured_comment
         type: switch
         span: left
     question:
-        label: Question
-        description: Edit question here
+        label: redmarlin.faq::lang.common.question
+        comment: redmarlin.faq::lang.question.question_comment
         type: text
     answer:
-        label: Answer
-        description: Edit answer here
+        label: redmarlin.faq::lang.question.answer
+        comment: redmarlin.faq::lang.question.answer_comment
         type: markdown
         size: small
     created_at:
-        label: Creation Date
-        description: When the Question was created
+        label: redmarlin.faq::lang.question.created_at
+        comment: redmarlin.faq::lang.question.created_at_comment
         type: datepicker
     reply_email:
-        label: Notification Email
+        label: redmarlin.faq::lang.question.reply_email
         disabled: true
